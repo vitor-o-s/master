@@ -32,3 +32,13 @@ Disciplina ofetada em 2024.1 de forma remota pela PPGCC (UFSC). Curso ministrado
 
 disjunta - é uma ou outra especialização
 total - é obrigatório ser algum dos casos
+## Atividade 1 (12/02)
+
+Modelagem E-R
+
+## Atividade 2 (19/02)
+
+Levantar definições e desafios dos seguintes V's:
+
+* Viscosidade:
+* Volatilidade: 
