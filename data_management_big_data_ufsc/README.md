@@ -38,7 +38,11 @@ disjunta - é uma ou outra especialização
 total - é obrigatório ser algum dos casos
 ## Atividade 1 (12/02)
 
-O enunciado do exercício se encontra na página 16 do material [Aula 1 - Revisão Modelagem Conceitual.pdf](). Realizar a modelagem E-R de uma clínica de saúde.
+O enunciado do exercício se encontra na página 16 do material [Aula 1 - Revisão Modelagem Conceitual.pdf](https://github.com/vitor-o-s/master/blob/main/data_management_big_data_ufsc/Aula%201%20-%20Revisa%CC%83o%20Modelagem%20Conceitual.pdf). Realizar a modelagem E-R de uma clínica de saúde.
+
+Minha proposta de solução: ![Minha solução](https://github.com/vitor-o-s/master/blob/main/data_management_big_data_ufsc/Exercicio1ModelagemERClinicaSaude.png)
+
+Proposta de solução do professor: ![Solução proposta pelo professor](https://github.com/vitor-o-s/master/blob/main/data_management_big_data_ufsc/SolucaoPropostaModelagemERClinicaSaude.png)
 
 ## Atividade 2 (19/02)
 
