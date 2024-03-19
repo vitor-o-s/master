@@ -38,7 +38,7 @@ disjunta - é uma ou outra especialização
 total - é obrigatório ser algum dos casos
 ## Atividade 1 (12/02)
 
-Modelagem E-R
+O enunciado do exercício se encontra na página 16 do material [Aula 1 - Revisão Modelagem Conceitual.pdf](). Realizar a modelagem E-R de uma clínica de saúde.
 
 ## Atividade 2 (19/02)
 
