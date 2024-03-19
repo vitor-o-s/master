@@ -2,6 +2,10 @@
 
 Disciplina ofetada em 2024.1 de forma remota pela PPGCC (UFSC). Curso ministrado pelo professor Ronaldo S. Mello
 
+Nota Final = (Prova * 0,3) + (Artigo * 0,3) + (Seminário * 0,3) + (Atividades de aula * 0,1)
+
+Modelo do LaTex para o artigo: [SBC Conferences Template](https://pt.overleaf.com/latex/templates/sbc-conferences-template/blbxwjwzdngr)
+
 ## Cronograma
 
 * [X] 12/03 Plano de Ensino da disciplina; modelagem de dados
