@@ -23,5 +23,7 @@ Sendo que caso o aluno faça os 5 testes um deles poderá ser descartado.
 ## Aula 1
 
 **É necessário pensar no tipo da análise antes de coletar os dados**
-[Slides de apresentação]()
+
+[Slides de apresentação](https://github.com/vitor-o-s/master/blob/main/statistical_methods_scientific_research_ufpr/mepc-2024-00.pdf)
+
 [Análise exploratória da turma ](https://lineu96.github.io/quest-mepc23/index.html)
