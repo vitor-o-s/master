@@ -21,3 +21,5 @@ Sendo que caso o aluno faça os 5 testes um deles poderá ser descartado.
 * **Ciclo 5**: Tópicos em métodos estatísticos.
 
 ## Aula 1
+
+**É necessário pensar no tipo da análise antes de coletar os dados**
