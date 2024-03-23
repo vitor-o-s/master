@@ -48,5 +48,5 @@ Proposta de solução do professor: ![Solução proposta pelo professor](https:/
 
 Levantar definições e desafios dos seguintes V's:
 
-* Viscosidade:
-* Volatilidade: 
+* Viscosidade: There is a time discrepancy between the actual event and what is being described.(Lag of Event). [The 17 V’s of Big Data written by Vishnuka Mahendran](https://medium.com/@vishnuka2019/the-17-vs-of-big-data-c1f2f969847f) - Quanto tempo aquela informação demora pra ser utilizada.
+* Volatilidade: The volatility, sometimes referred to as another “V” of big data, is the rate of change and lifetime of the data. An example of highly volatile data includes social media, where sentiments and trending topics change quickly and often. [10 Vs in Big data written by Tejaswi Battula](https://www.linkedin.com/pulse/big-data-tejaswi-battula/) - A taxa de mudança dos dados.
