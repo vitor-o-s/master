@@ -52,3 +52,10 @@ Levantar definições e desafios dos seguintes V's:
 * Volatilidade: The volatility, sometimes referred to as another “V” of big data, is the rate of change and lifetime of the data. An example of highly volatile data includes social media, where sentiments and trending topics change quickly and often. [10 Vs in Big data written by Tejaswi Battula](https://www.linkedin.com/pulse/big-data-tejaswi-battula/) - A taxa de mudança dos dados.
 
 ## Atividade 3 (26/03)
+
+* Ler o capítulo 13 do livro NoSQL Distilled
+* Ler o texto: https://martinfowler.com/articles/nosql-intro-original.pdf
+* Responder as seguintes perguntas:
+  * 1) O que é persistência poliglota?
+  * 2) Qual(is) a(s) vantagem(ns) de utilizar persistência poliglota?
+  * 3) Qual(is) a(s) dificuldade(s) em utilizar persistência poliglota?
