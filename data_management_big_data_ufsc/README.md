@@ -56,6 +56,6 @@ Levantar definições e desafios dos seguintes V's:
 * Ler o capítulo 13 do livro NoSQL Distilled
 * Ler o texto: https://martinfowler.com/articles/nosql-intro-original.pdf
 * Responder as seguintes perguntas:
-  * 1) O que é persistência poliglota?
-  * 2) Qual(is) a(s) vantagem(ns) de utilizar persistência poliglota?
-  * 3) Qual(is) a(s) dificuldade(s) em utilizar persistência poliglota?
+  * 1) O que é persistência poliglota? - We use the term polyglot persistence to define this hybrid approach to persistence (pg 179 do livro). 
+  * 2) Qual(is) a(s) vantagem(ns) de utilizar persistência poliglota? - Melhor performance em consultas e divisão das operações de escrita (pg 179 do livro). Encapsulamento dos dados em um serviço ao inves do uso direto da base de dados (pg do livro 181). Expansão das funcionalidades das bases (ex. uso de Redis como cache de um sistema como o BQ) (pg do livro 182).
+  * 3) Qual(is) a(s) dificuldade(s) em utilizar persistência poliglota? - Múltiplas licenças, perfil de DBAs variado visto que cada ferramenta exige um aprofundamento em si, segurança que no mundo NoSQL pode ser algo ainda não muito bem resolvido e integração com muitas ferramentas que pode gerar uma dificuldade na orquestração (pg 184 do livro). 
