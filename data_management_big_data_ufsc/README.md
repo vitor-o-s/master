@@ -11,7 +11,7 @@ Modelo do LaTex para o artigo: [SBC Conferences Template](https://pt.overleaf.co
 * [X] 12/03 Plano de Ensino da disciplina; modelagem de dados
 * [X] 19/03 Introdução à Big Data
 * [X] 26/03 BDs nas nuvens; BDs NoSQL
-* [ ] 02/04 BDs NoSQL
+* [X] 02/04 BDs NoSQL
 * [ ] 09/04 BDs NoSQL
 * [ ] 16/04 BDs NoSQL
 * [ ] 23/04 BDs NewSQL e BDs em memória
@@ -51,7 +51,7 @@ Levantar definições e desafios dos seguintes V's:
 * Viscosidade: There is a time discrepancy between the actual event and what is being described.(Lag of Event). [The 17 V’s of Big Data written by Vishnuka Mahendran](https://medium.com/@vishnuka2019/the-17-vs-of-big-data-c1f2f969847f) - Quanto tempo aquela informação demora pra ser utilizada.
 * Volatilidade: The volatility, sometimes referred to as another “V” of big data, is the rate of change and lifetime of the data. An example of highly volatile data includes social media, where sentiments and trending topics change quickly and often. [10 Vs in Big data written by Tejaswi Battula](https://www.linkedin.com/pulse/big-data-tejaswi-battula/) - A taxa de mudança dos dados.
 
-## Atividade 3 (26/03)
+## Atividade 3 (26/03) - Nota
 
 * Ler o capítulo 13 do livro NoSQL Distilled
 * Ler o texto: https://martinfowler.com/articles/nosql-intro-original.pdf
@@ -59,3 +59,7 @@ Levantar definições e desafios dos seguintes V's:
   * 1) O que é persistência poliglota? - We use the term polyglot persistence to define this hybrid approach to persistence (pg 179 do livro). 
   * 2) Qual(is) a(s) vantagem(ns) de utilizar persistência poliglota? - Melhor performance em consultas e divisão das operações de escrita (pg 179 do livro). Encapsulamento dos dados em um serviço ao inves do uso direto da base de dados (pg do livro 181). Expansão das funcionalidades das bases (ex. uso de Redis como cache de um sistema como o BQ) (pg do livro 182).
   * 3) Qual(is) a(s) dificuldade(s) em utilizar persistência poliglota? - Múltiplas licenças, perfil de DBAs variado visto que cada ferramenta exige um aprofundamento em si, segurança que no mundo NoSQL pode ser algo ainda não muito bem resolvido e integração com muitas ferramentas que pode gerar uma dificuldade na orquestração (pg 184 do livro). 
+
+## Atividade 4 (02/04) - Nota
+
+O enunciado do exercício se encontra na página 80 do material [4-BD_NoSQL_2.pdf](https://github.com/vitor-o-s/master/blob/main/data_management_big_data_ufsc/4-BD_NoSQL_2.pdf). Propor um projeto lógico NoSQL em agregados e um projeto lógico para BD NoSQL grafo, para o domínio de um Zoológico
