@@ -12,7 +12,7 @@ Modelo do LaTex para o artigo: [SBC Conferences Template](https://pt.overleaf.co
 * [X] 19/03 Introdução à Big Data
 * [X] 26/03 BDs nas nuvens; BDs NoSQL
 * [X] 02/04 BDs NoSQL
-* [ ] 09/04 BDs NoSQL
+* [X] 09/04 BDs NoSQL
 * [ ] 16/04 BDs NoSQL
 * [ ] 23/04 BDs NewSQL e BDs em memória
 * [ ] 30/04 BDs NewSQL e BDs em memória
@@ -65,3 +65,9 @@ Versão entregue: [Atividade 01 - Persistência Poliglóta.pdf](https://github.c
 ## Atividade 4 (02/04) - Nota
 
 O enunciado do exercício se encontra na página 80 do material [4-BD_NoSQL_2.pdf](https://github.com/vitor-o-s/master/blob/main/data_management_big_data_ufsc/4-BD_NoSQL_2.pdf). Propor um projeto lógico NoSQL em agregados e um projeto lógico para BD NoSQL grafo, para o domínio de um Zoológico
+
+## Atividade 5 (09/04) - Nota
+
+O enunciado do exercício se encontra na página 13, 14 e 15 do material [5-BD_NoSQL_3.pdf](https://github.com/vitor-o-s/master/blob/main/data_management_big_data_ufsc/5-BD_NoSQL_3.pdf). Estruturar, popular e consultar dados utilizando a interface web do [banco Neo4j](https://console.neo4j.org/)
+
+Versão entregue: [Atividade 03 - Prática Neo4j]()
