@@ -1,0 +1,106 @@
+# Create perfis
+CREATE(Ronaldo:Perfil{nome:"Ronaldo", email:"r.mello@ufsc.br,", idade:55, cidade:"Porto Alegre", telefone:"999999999"});
+CREATE(Luma:Perfil{nome:"Luma", email:"luma@gmail.com", idade:30, cidade:"Florianopolis", telefone:"888888888"});
+CREATE(Karla:Perfil{nome:"Karla", email:"karla@gmail.com", idade:27, cidade:"Florianopolis", telefone:"777777777"});
+CREATE(Lucas:Perfil{nome:"Lucas", email:"ucas@gmail.com", idade:35, cidade:"Lages", telefone:"666666666"});
+
+# Create relações amizade
+
+## Ronaldo e Luma
+match (Ronaldo:Perfil),(Luma:Perfil) 
+WHERE Ronaldo.nome = "Ronaldo"
+AND Luma.nome = "Luma"
+CREATE (Luma)-[:amizade{timestamp:"4/4/2023 15:00"}]->(Ronaldo);
+
+match (Ronaldo:Perfil),(Luma:Perfil) 
+WHERE Ronaldo.nome = "Ronaldo"
+AND Luma.nome = "Luma"
+CREATE (Ronaldo)-[:amizade{timestamp:"4/4/2023 15:00"}]->(Luma);
+
+## Ronaldo e Karla
+match (Ronaldo:Perfil),(Karla:Perfil) 
+WHERE Ronaldo.nome = "Ronaldo"
+AND Karla.nome = "Karla"
+CREATE (Karla)-[:amizade{timestamp:"3/4/2023 10:00"}]->(Ronaldo);
+
+match (Ronaldo:Perfil),(Karla:Perfil) 
+WHERE Ronaldo.nome = "Ronaldo"
+AND Karla.nome = "Karla"
+CREATE (Ronaldo)-[:amizade{timestamp:"3/4/2023 10:00"}]->(Karla);
+
+## Luma e Lucas
+match (Lucas:Perfil),(Luma:Perfil) 
+WHERE Lucas.nome = "Lucas"
+AND Luma.nome = "Luma"
+CREATE (Luma)-[:amizade{timestamp:"2/4/2023 09:00"}]->(Lucas);
+
+match (Lucas:Perfil),(Luma:Perfil) 
+WHERE Lucas.nome = "Lucas"
+AND Luma.nome = "Luma"
+CREATE (Lucas)-[:amizade{timestamp:"2/4/2023 09:00"}]->(Luma);
+
+## Luma e Karla
+match (Luma:Perfil),(Karla:Perfil) 
+WHERE Luma.nome = "Luma"
+AND Karla.nome = "Karla"
+CREATE (Karla)-[:amizade{timestamp:"1/4/2023 14:00"}]->(Luma);
+
+match (Luma:Perfil),(Karla:Perfil) 
+WHERE Luma.nome = "Luma"
+AND Karla.nome = "Karla"
+CREATE (Luma)-[:amizade{timestamp:"1/4/2023 14:00"}]->(Karla);
+
+## Create Posts
+
+CREATE(p1:Post{id:100, texto:"Estressada!", timestamp:"1/4/2023 10:00"});
+match (Karla:Perfil),(p1:Post) WHERE Karla.nome = "Karla" AND p1.id = 100 CREATE (Karla)-[:posse]->(p1);
+match (Karla:Perfil),(p1:Post) WHERE Karla.nome = "Karla" AND p1.id = 100 CREATE (p1)-[:posse]->(Karla);
+
+CREATE(p2:Post{id:101, texto:"Que dia lindo!", timestamp:"3/4/2023 14:30"}); 
+match (Karla:Perfil),(p2:Post) WHERE Karla.nome = "Karla" AND p2.id = 101 CREATE (Karla)-[:posse]->(p2);
+match (Karla:Perfil),(p2:Post) WHERE Karla.nome = "Karla" AND p2.id = 101 CREATE (p2)-[:posse]->(Karla);
+
+CREATE(p3:Post{id:102, texto:"Novo mês iniciado!", timestamp:"1/4/2023 11:00"}); 
+match (Ronaldo:Perfil),(p3:Post) WHERE Ronaldo.nome = "Ronaldo" AND p3.id = 102 CREATE (Ronaldo)-[:posse]->(p3);
+match (Ronaldo:Perfil),(p3:Post) WHERE Ronaldo.nome = "Ronaldo" AND p3.id = 102 CREATE (p3)-[:posse]->(Ronaldo);
+
+CREATE(p4:Post{id:103, texto:"Estou gripado!", timestamp:"4/4/2023 14:30"}); 
+match (Ronaldo:Perfil),(p4:Post) WHERE Ronaldo.nome = "Ronaldo" AND p4.id = 103 CREATE (Ronaldo)-[:posse]->(p4);
+match (Ronaldo:Perfil),(p4:Post) WHERE Ronaldo.nome = "Ronaldo" AND p4.id = 103 CREATE (p4)-[:posse]->(Ronaldo);
+
+## Create Likes
+
+match (Lucas:Perfil),(p2:Post) WHERE Lucas.nome = "Lucas" AND p2.id = 101 CREATE (Lucas)-[:curtiu{timestamp:"4/4/2023 11:30"}]->(p2);
+match (Lucas:Perfil),(p2:Post) WHERE Lucas.nome = "Lucas" AND p2.id = 102 CREATE (Lucas)-[:curtiu{timestamp:"4/4/2023 15:00"}]->(p2);
+
+
+## Create Comentários
+
+match (person:Perfil),(p:Post) WHERE person.nome = "Karla" AND p.id = 103 CREATE (person)-[:comentario{texto:"melhoras!",timestamp:"4/4/2023 16:00"}]->(p);
+
+## Exercícios 
+
+### 1 Buscar todos os posts do BD
+MATCH (p:Post) RETURN p;
+
+### 2 Buscar os perfis de Florianopolis
+MATCH (perfil:Perfil {cidade: "Florianopolis"}) RETURN perfil;
+
+### 3 Buscar os nomes dos amigos de Karla
+MATCH (Karla:Perfil {nome: "Karla"})-[:amizade]->(amigo) RETURN amigo.nome;
+
+### 4 Buscar a idade da pessoa mais velha da rede social
+MATCH (perfil:Perfil) RETURN max(perfil.idade);
+----MATCH (perfil:Perfil) RETURN perfil.nome, max(perfil.idade); ORDER BY perfil.idade DESC LIMIT 1;
+
+### 5 Buscar o número de amigos de Ronaldo
+MATCH (Ronaldo:Perfil {nome: "Ronaldo"})-[:amizade]->(amigo) RETURN COUNT(amigo) AS NumeroDeAmigos;
+
+### 6 Buscar os nomes das pessoas que comentaram ou deram like nos posts de Ronaldo
+MATCH (pessoa)-[r:comentario|curtiu]->(p:Post)<-[:posse]-(Ronaldo:Perfil {nome: "Ronaldo"}) RETURN DISTINCT pessoa.nome;
+
+### 7 Remover os comentários feitos pela Karla
+MATCH (Karla:Perfil {nome: "Karla"})-[r:comentario]->(p:Post) DELETE r;
+
+### 8 Alterar a idade de Lucas para 37 e sua cidade para Florianopolis
+MATCH (Lucas:Perfil {nome: "Lucas"}) SET Lucas.idade = 37, Lucas.cidade = "Florianopolis" RETURN Lucas;
