@@ -1,0 +1,1 @@
+from conexoes import conexao_tdengine
